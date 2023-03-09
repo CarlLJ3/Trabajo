@@ -1,0 +1,191 @@
+<html>
+ <head>
+   <title>Formulario</title>
+  <Style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    }
+    
+    li {
+    float: left;
+    }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111111;
+  }
+   </Style>
+   <h1><link rel="stylsheed" href="https://fonts.googleapis.com/css?family=Lato"></h1>
+ </head>
+ <body style="background-color: ghostwhite;">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="bio.html">Biografia</a></li>
+    <li><a href="music.html">Musica</a></li>
+    <li><a href="fotos.html">Fotos</a></li>
+    <li><a href="tablas.html">Tablas</a></li>
+    <li><a href="parientes.html">Los parientes</a></li>
+    <li><a href="formulario.html">Contactanos</a></li>
+  </ul>
+  <h1>Datos del usuario</h1>
+
+  <p>Ayudame a conocerte llenando este formulario
+    
+  <fieldset>
+    <form action="mailto:21325050510269@cbtis051.edu.mx" method="post">
+      
+      <input type="hidden" id="tipoform" name="tipoform">
+
+    <label for="fnombre">Nombre:</label><br>
+    <input type="text" id="fnombre" name="fnombre" size="60" maxlength="80" placeholder="Nombre Apellido P Apellido M" autofocus>
+  </fieldset>
+    <br><br>
+
+  <fieldset>
+    <label for="fpassword">Contraseña:</label><br>
+    <input type="password" id="fpassword" name="fpassword" size="60" maxlength="60">
+  </fieldset>
+    <br><br>
+
+    <fieldset>
+      <label for="fcorreo">Correo:</label><br>
+      <input type="email" id="fcorreo" name="fcorreo" size="60" maxlength="60" placeholder="example@gmail.com">
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <label for="fpromedio">¿Cual es el promedio escolar?</label><br>
+      <input type="number" id="fpromedio" name="fpromedio" min="0" max="10" step="0.1" value="8" size="60">
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <label for="fgusto">¿Grado de satisfaccion con tu escuela?</label><br>
+      <input type="range" id="fgusto" name="fgusto" value="0" >
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <label for="ftelefono">Numero de telefono:</label><br>
+      <input type="tel" id="ftelefono" name="ftelefono" pattern="+[0-9]{3}-[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+    </fieldset>
+    <br><br>
+    
+    <fieldset>
+      <label for="fcabello">Color de cabello:</label><br>
+      <input type="color" id="fcabello" name="fcabello" value="#000000">
+    </fieldset>
+    <br><br>
+    
+  <fieldset>
+    <label for="ffoto">Elige una foto para tu perfil</label><br><br>
+    <input type="file" id="ffoto" name="ffoto">
+  </fieldset>
+  <br><br>
+
+    <fieldset>
+      <label for="fcumpleaños">Cumpleaños:</label>
+      <input type="datetime-local" id="fcumpleaños" name="fcumpleaños" min="1901-01-01">
+    </fieldset>
+    <br><br>
+
+      <fieldset>
+      <label for="fgenero">Genero:</label><br>
+      <input type="radio" id="masculino1" name="genero" value="Masculino">
+      <label for="masculino1">Masculino</label>
+      <br>
+      <input type="radio" id="femenino2" name="genero" value="Femenino">
+      <label for="femenino2">Femenino</label>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <label for="fpreferencias">Preferencias:</label><br>
+      <input type="checkbox" id="Preferencias1" name="Preferencias1" value="Suchi">
+      <label for="Preferencias1">Me gusta el Suchi</label>
+      <br>
+      <input type="checkbox" id="Preferencias2" name="Preferencias2" value="Pizza">
+      <label for="Preferencias1">Me gusta la Pizza</label>
+      <br>
+      <input type="checkbox" id="Preferencias3" name="Preferencias3" value="Tacos">
+      <label for="Preferencias1">Me gustan los Tacos</label>
+    </fieldset>
+    <br><br>
+
+  <fieldset>
+    <label for="festado">Estado:</label>
+    <select id="festado" name="festado">
+    <option value="Aguascalientes">Aguascalientes</option>
+    <option value="Baja California">Baja California</option>
+    <option value="Baja California Sur">Baja California Sur</option>
+    <option value="Campeche">Campeche</option>
+    <option value="Coahuila">Coahuila</option>
+    <option value="Colima">Colima</option>
+    <option value="Chiapas">Chiapas</option>
+    <option value="Chihuahua">Chihuahua</option>
+    <option value="Durango">Durango</option>
+    <option value="Distrito Federal">Distrito Federal</option>
+    <option value="Guanajuato">Guanajuato</option>
+    <option value="Guerrero">Guerrero</option>
+    <option value="Hidalgo">Hidalgo</option>
+    <option value="Jalisco">Jalisco</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Michoacan">Michoacan</option>
+    <option value="Morelos">Morelos</option>
+    <option value="Nayarit">Nayarit</option>
+    <option value="Nuevo Leon">Nuevo Leon</option>
+    <option value="Oaxaca">Oaxaca</option>
+    <option value="Puebla">Puebla</option>
+    <option value="Queretaro">Queretaro</option>
+    <option value="Quintana Roo">Quintana Roo</option>
+    <option value="San Luis Potosi">San Luis Potosi</option>
+    <option value="Sinaloa">Sinaloa</option>
+    <option value="Sonora">Sonora</option>
+    <option value="Tabasco">Tabasco</option>
+    <option value="Tamaulipas">Tamaulipas</option>
+    <option value="Tlaxcala">Tlaxcala</option>
+    <option value="Veracruz">Veracruz</option>
+    <option value="Yucatan">Yucatan</option>
+    <option value="Zacatecas">Zacatecas</option>
+  </select>
+</fieldset>
+  <br><br>
+
+  <fieldset>
+    <label for="fciudad">Estado:</label>
+    <select id="fciudad" name="fciudad">
+      <option value="Los Mochis">Los Mochis</option>
+      <option value="Culiacán">Culiacán</option>
+      <option value="Mazatlán">Mazatlán</option>
+      <option value="Concordia">Concordia</option>
+      <option value="Escuinapa">Escuinapa</option>
+    </select>
+  </fieldset><br><br>
+
+    <button type="button" onclick="alert('Que cojo eres...')">.....</button><br><br>
+
+  <fieldset>
+    <label for="fcomentarios">Comentarios</label><br>
+    <textarea name="Comentarios" cols="40" rows="5"></textarea>
+  </fieldset>
+    <br><br>
+
+    <input type="reset" value="Eliminar">
+    <br><br>
+
+    <input type="image" src="img/boton.png" alt="Enviar" width="50" height="50">
+  </form>
+</p>
+ </body>
+</html>
