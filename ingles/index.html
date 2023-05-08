@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body style="background-color: aquamarine;">
+        <audio id="Aud" autoplay></audio>
+        <h1>Shuffle Lottery</h1>
+        <button id="inicio" class="button" onclick="ind()">Home</button>
+        <button id="siguiente" class="button" onclick="sig()">Following</button>
+        <br>
+        <button id="atras" class="button" onclick="atr()" >Back</button>
+        <br>
+        <button id="baraja" class="button" onclick="location.reload()">Shuffle</button>
+        <p onclick="play()">
+            <img id="imagen">
+        </p>
+        <script>
+          
+            var c=0;
+            document.getElementById("siguiente").style.display='none'
+    document.getElementById("atras").style.display='none'
+    document.getElementById("baraja").style.display='none'
+            const baraja = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
+            21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40, 41,42,
+            43,44,45,46,47,48,49,50,51,52,53,54];
+
+            function desordena() {
+                for (let i = baraja.length -1; i > 0; i--) {
+                    let j = Math.floor(Math.random() * (i+1));
+                    let k = baraja[i];
+                    baraja[i] = baraja[j];
+                    baraja[j] = k;
+                }
+            }
+            desordena();
+
+function ind()
+{
+    
+    document.getElementById("imagen").src= baraja[0]+".jpg"
+    document.getElementById("inicio").style.display='none'
+    document.getElementById("siguiente").style.display='block'
+    document.getElementById("atras").style.display='block'
+    document.getElementById("Aud").src="Audio/"+baraja[c]+".mp3";
+}
+
+function sig(){
+    if(c !== 53){
+        c++
+           document.getElementById("imagen").src= baraja[c]+".jpg"
+           console.log(c)
+           document.getElementById("Aud").src="Audio/"+baraja[c]+".mp3";
+    }
+    if (c==53){
+   document.getElementById("baraja").style.display='block'
+}      
+           }
+function atr(){
+    if(c !== 0)
+    c--
+    document.getElementById("imagen").src= baraja[c]+".jpg"
+    document.getElementById("Aud").src="Audio/"+baraja[c]+".mp3";
+}
+function play(){
+                var audi = new Audio('Audio/'+baraja[ind]+'.mp3');
+
+                sig.addEventListener('click', ()=>{
+                    audio.play();
+                });
+
+                atr.addEventListener('click', ()=>{
+                    audio.play();
+                });
+}
+        </script>
+    </body>
+</html>
